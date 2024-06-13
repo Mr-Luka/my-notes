@@ -8,7 +8,7 @@ const NotesList = props => {
     const itMatches= note=> note.doesMatchSearch;
     const searchMatches = props.notes.filter(itMatches)
 
-    const renderNote = note => <Note note={note} key={note.id}/>
+    const renderNote = note => <Note note={note} key={note.id} onType={props.onType}/>
     const noteElements = searchMatches.map(renderNote)
 
     return (
